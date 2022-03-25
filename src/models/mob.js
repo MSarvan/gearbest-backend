@@ -13,6 +13,6 @@ const mobileSchema = new mongoose.Schema(
   },
 );
 
-const mobiledata = new mongoose.model("Mobiles", mobileSchema);
+const mobiledata = new mongoose.model("mobiles", mobileSchema);
 
 module.exports = mobiledata;
