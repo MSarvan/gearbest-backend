@@ -16,11 +16,11 @@ const PrinterController = require("./controllers/printer.js");
 const UserController = require("./controllers/user.js");
 // const { register, login, check } = require("./controllers/auth.js");
 
-app.use('/', function (req, res) {
-    return res.redirect('https://faballey-clone.vercel.app/');
-});
+// app.use('/', function (req, res) {
+//     return res.redirect('https://faballey-clone.vercel.app/');
+// });
 
-app.get("/mobiles", mobileController);
+app.use("/mobiles", mobileController);
 app.use("/laptop", LaptopController);
 app.use("/headphone", HeadphoneController);
 app.use("/Drone", DroneController);
