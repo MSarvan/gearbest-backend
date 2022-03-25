@@ -1,4 +1,4 @@
-const HeadphoneData = require("../models/headphones-mod.js");
+const MobileData = require("../models/mob.js");
 const express = require("express");
 
 const router = express.Router();
@@ -6,8 +6,8 @@ const router = express.Router();
 
 router.post("", async (req, res) => {
   try {
-    const headphones = await HeadphoneData.create(req.body);
-    return res.status(200).send(headphones);
+    const mobiles = await MobileData.create(req.body);
+    return res.status(200).send(mobiles);
   } catch (e) {
     return res.status(500).send(e.message);
   }
@@ -15,8 +15,8 @@ router.post("", async (req, res) => {
 
 router.get("", async (req, res) => {
   try {
-    const headphones = await HeadphoneData.find().lean().exec();
-    return res.status(200).send(headphones);
+    const mobiles = await MobileData.find().lean().exec();
+    return res.status(200).send(mobiles);
   } catch (e) {
     return res.status(500).send(e.message);
   }
@@ -24,9 +24,9 @@ router.get("", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
   try {
-    const headphones = await HeadphoneData.findById(req.params.id);
+    const mobiles = await MobileData.findById(req.params.id);
 
-    return res.status(200).send(headphones);
+    return res.status(200).send(mobiles);
   } catch (e) {
     return res.status(500).send(e.message);
   }
@@ -34,12 +34,12 @@ router.get("/:id", async (req, res) => {
 
 router.patch(":id", async (req, res) => {
   try {
-    const headphones = await HeadphoneData.findByIdAndUpdate(req.params.id, req.body, {
+    const mobiles = await MobileData.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     })
       .lean()
       .exec();
-    return res.status(200).send(headphones);
+    return res.status(200).send(mobiles);
   } catch (e) {
     return res.status(500).send(e.message);
   }
@@ -47,8 +47,8 @@ router.patch(":id", async (req, res) => {
 
 router.delete("/:id", async (req, res) => {
   try {
-    const headphones = await HeadphoneData.findByIdAndDelete(req.params.id).lean().exec();
-    return res.status(200).send(headphones);
+    const mobiles = await MobileData.findByIdAndDelete(req.params.id).lean().exec();
+    return res.status(200).send(mobiles);
   } catch (e) {
     return res.status(500).send(e.message);
   }

@@ -1,4 +1,4 @@
-const Users = require("../models/user-mod.js");
+const Users = require("../models/user.js");
 const express = require("express");
 
 const router = express.Router();

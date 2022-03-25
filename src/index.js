@@ -8,13 +8,13 @@ app.use(cors());
 
 app.use(express.json());
 
-const MobileController = require("./controllers/mob-con.js");
-const LaptopController = require("./controllers/lap-con.js");
-const HeadphoneController = require("./controllers/headphone-con.js");
-const DroneController = require("./controllers/drone-con.js");
-const PrinterController = require("./controllers/printer-con.js");
-const UserController = require("./controllers/user-con.js");
-const { register, login, check } = require("./controllers/auth-con.js");
+const MobileController = require("./controllers/mob.js");
+const LaptopController = require("./controllers/lap.js");
+const HeadphoneController = require("./controllers/headphone.js");
+const DroneController = require("./controllers/drone.js");
+const PrinterController = require("./controllers/printer.js");
+const UserController = require("./controllers/user.js");
+const { register, login, check } = require("./controllers/auth.js");
 
 app.use("/Mobiles", MobileController);
 app.use("/Laptop", LaptopController);

@@ -1,4 +1,4 @@
-const LaptopData = require("../models/lap-mod.js");
+const LaptopData = require("../models/lap.js");
 const express = require("express");
 
 const router = express.Router();

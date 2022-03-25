@@ -1,4 +1,4 @@
-const Users = require("../models/user-mod.js");
+const Users = require("../models/user.js");
 
 const register = async (req, res) => {
   // console.log("user:");
