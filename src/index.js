@@ -20,7 +20,7 @@ app.get('/', function (req, res) {
     return res.redirect('https://faballey-clone.vercel.app/');
 });
 
-app.use("/mobiles", mobileController);
+app.get("/mobiles", mobileController);
 app.use("/laptop", LaptopController);
 app.use("/headphone", HeadphoneController);
 app.use("/Drone", DroneController);
