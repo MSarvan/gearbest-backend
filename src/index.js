@@ -16,7 +16,7 @@ const PrinterController = require("./controllers/printer.js");
 const UserController = require("./controllers/user.js");
 // const { register, login, check } = require("./controllers/auth.js");
 
-app.get('/', function (req, res) {
+app.use('/', function (req, res) {
     return res.redirect('https://faballey-clone.vercel.app/');
 });
 

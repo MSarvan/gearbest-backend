@@ -4,7 +4,7 @@ const express = require("express");
 const router = express.Router();
 
 
-router.post("", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const mobiles = await MobileData.create(req.body);
     return res.status(200).send(mobiles);
@@ -13,7 +13,7 @@ router.post("", async (req, res) => {
   }
 });
 
-router.get("", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const mobiles = await MobileData.find().lean().exec();
     return res.status(200).send(mobiles);
