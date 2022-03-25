@@ -14,6 +14,7 @@ router.post("/", async (req, res) => {
 });
 
 router.get("/", async (req, res) => {
+  console.log("hlo");
   try {
     const mobiles = await MobileData.find().lean().exec();
     return res.status(200).send(mobiles);
@@ -32,7 +33,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.patch(":id", async (req, res) => {
+router.patch("/:id", async (req, res) => {
   try {
     const mobiles = await MobileData.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
