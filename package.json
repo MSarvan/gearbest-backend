@@ -1,0 +1,28 @@
+{
+  "name": "router-project-back-end-",
+  "version": "1.0.0",
+  "description": "create a React Cart app assignment given in masai, this backend for that project here is the link for frontend  --> https://github.com/ravi-bala13/router-project-Front-end-",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravi-bala13/router-project-Back-end-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ravi-bala13/router-project-Back-end-/issues"
+  },
+  "homepage": "https://github.com/ravi-bala13/router-project-Back-end-#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.7",
+    "nodemon": "^2.0.15"
+  }
+}
