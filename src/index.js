@@ -14,7 +14,7 @@ const HeadphoneController = require("./controllers/headphone.js");
 const DroneController = require("./controllers/drone.js");
 const PrinterController = require("./controllers/printer.js");
 const UserController = require("./controllers/user.js");
-// const { register, login, check } = require("./controllers/auth.js");
+const { register, login, check } = require("./controllers/auth.js");
 
 // app.use('/', function (req, res) {
 //     return res.redirect('https://faballey-clone.vercel.app/');
@@ -26,8 +26,8 @@ app.use("/headphone", HeadphoneController);
 app.use("/Drone", DroneController);
 app.use("/Printer", PrinterController);
 app.use("/User", UserController);
-// app.post("/register", register);
-// app.post("/login", login);
-// app.get("/register", check);
+app.post("/register", register);
+app.post("/login", login);
+app.get("/register", check);
 
 module.exports = app;
